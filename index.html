@@ -10,15 +10,16 @@
 button,input{font:inherit}button{cursor:pointer;border:0}
 .wrap{width:min(1180px,100%);margin:auto;padding:20px 18px 34px}
 header{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:18px}
-.brand{display:flex;align-items:center;gap:12px}.brand img{width:60px;height:60px;border-radius:14px;object-fit:cover;background:#fff;box-shadow:0 5px 16px rgba(0,0,0,.08)}
-.brand h1{font-size:23px;line-height:1.2;margin:0 0 4px;letter-spacing:-.4px}.brand p{font-size:13px;color:var(--muted);margin:0}
+.brand{display:flex;align-items:center;gap:12px}.brand img{width:72px;height:72px;border-radius:14px;object-fit:cover;background:#fff;box-shadow:0 5px 16px rgba(0,0,0,.08)}
+.brand h1{font-size:25px;line-height:1.15;margin:0 0 4px;letter-spacing:-.4px}.brand p{font-size:14px;color:var(--muted);margin:0}
 .meta{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:11px;color:#66716d}
 .hero{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:18px}
 .hero-main{background:linear-gradient(135deg,#fff4df 0%,#f9e7cf 48%,#f4d8c8 100%);color:#4a3529;border:1px solid #ead8c5}.eyebrow{font-size:11px;opacity:.72;margin-bottom:7px}.hero-value{font-size:37px;font-weight:800;letter-spacing:-1.2px}.hero-value span{font-size:13px;font-weight:500;opacity:.72}.hero-row{display:flex;justify-content:space-between;align-items:end;gap:15px}.hero-side{text-align:right}.hero-side .num{font-size:18px;font-weight:750}.hero-side small{font-size:11px;opacity:.68}.bar{height:9px;background:rgba(255,255,255,.18);border-radius:99px;overflow:hidden;margin:14px 0 8px}.bar i{display:block;height:100%;width:0;background:#fff;border-radius:99px}.hero-msg{font-size:12px;opacity:.85}.hero-main .eyebrow,.hero-main .hero-msg{color:#80695b}.hero-main .bar{background:rgba(120,85,58,.13)}.hero-main .bar i{background:linear-gradient(90deg,#c98a52,#d99f6d)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}.stat .label{font-size:12px;color:var(--muted);margin-bottom:7px}.stat .value{font-size:23px;font-weight:760;letter-spacing:-.5px}.stat .sub{font-size:11px;color:var(--muted);margin-top:4px}.green{color:var(--green)}.gold{color:var(--gold)}.red{color:var(--red)}
 .section{margin-top:14px}.title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.title h2{font-size:15px;margin:0}.title span{font-size:11px;color:var(--muted)}
 .settings{display:flex;align-items:center;justify-content:space-between;gap:12px}.setting-label{font-size:11px;color:var(--muted)}.setting-value{display:flex;align-items:center;gap:9px}.setting-value input{width:86px}
-input{border:1px solid var(--line);background:#fbfcfb;border-radius:9px;padding:8px 9px;outline:0;text-align:right;color:var(--ink)}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input[type=number]{-moz-appearance:textfield}input:focus{border-color:#81b9aa;box-shadow:0 0 0 3px rgba(23,107,90,.08)}
+input{border:1px solid var(--line);background:#fbfcfb;border-radius:9px;padding:8px 9px;outline:0;text-align:right;color:var(--ink)}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input[type=number]{-moz-appearance:textfield}input::placeholder{color:#aab3b0;opacity:1}
+input:focus{border-color:#81b9aa;box-shadow:0 0 0 3px rgba(23,107,90,.08)}
 .btn{background:#173c34;color:#fff;border-radius:9px;padding:8px 11px;font-size:11px}.btn.light{background:#edf2f0;color:#31514a}.btn.gold{background:#f5ecdc;color:#8b611e}
 table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid var(--line);padding:10px 7px;font-size:12px;text-align:right}th{font-size:10px;color:var(--muted);font-weight:600}th:first-child,td:first-child{text-align:left}.action{text-align:right!important}
 .month-mobile{display:none}.month-row-status{font-size:10px;padding:4px 7px;border-radius:99px;background:#eef3f1;color:#4e625c}.month-row-status.over{background:#f6eedf;color:#8a611f}.month-row-status.under{background:#f8e9e7;color:#9e5149}
@@ -34,9 +35,13 @@ footer{text-align:center;color:#9aa29f;font-size:10px;padding-top:18px}
 /* Mobile dashboard refinement */
 @media(max-width:800px){
   body{font-size:14px}
-  .wrap{padding-top:10px}
-  header{margin-bottom:10px}
-  .hero{position:sticky;top:0;z-index:8;grid-template-columns:1fr 1fr;gap:8px;margin:0 -12px;padding:8px 12px 10px;background:rgba(245,246,244,.96);backdrop-filter:blur(12px)}
+  .wrap{padding-top:5px}
+  header{margin-bottom:0;padding-bottom:2px}
+  .brand{gap:13px}
+  .brand img{width:70px;height:70px}
+  .brand h1{font-size:24px;line-height:1.12}
+  .brand p{font-size:13px;margin-top:3px}
+  .hero{position:sticky;top:0;z-index:8;grid-template-columns:1fr 1fr;gap:8px;margin:0 -12px;padding:4px 12px 8px;background:rgba(245,246,244,.96);backdrop-filter:blur(12px)}
   .hero .card{min-width:0;height:176px;padding:13px;border-radius:15px}
   .hero-main{display:flex;flex-direction:column;justify-content:space-between}
   .hero-value{font-size:27px;white-space:nowrap}
@@ -55,7 +60,7 @@ footer{text-align:center;color:#9aa29f;font-size:10px;padding-top:18px}
   .brand img{width:56px;height:56px}
   .brand h1{font-size:21px}
   .brand p{font-size:12px}
-  .meta{font-size:12px}
+  .meta{font-size:13px}.meta .pill{font-size:12px;padding:8px 11px}
 }
 
 @media(max-width:420px){
@@ -64,6 +69,23 @@ footer{text-align:center;color:#9aa29f;font-size:10px;padding-top:18px}
   .hero .hero-value span{font-size:10px}
   #todayInput{width:125px!important}
   #todaySave{padding:8px 8px;font-size:10px}
+}
+
+@media(min-width:521px) and (max-width:800px){
+  header{display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .brand{flex:1;min-width:0}
+  .meta{max-width:310px;display:grid;grid-template-columns:1fr 1fr;gap:7px}
+  .brand img{width:76px;height:76px}
+  .brand h1{font-size:26px}
+  .brand p{font-size:14px}
+}
+
+@media(max-width:420px){
+  .wrap{padding-top:4px}
+  .brand img{width:62px;height:62px}
+  .brand h1{font-size:21px}
+  .brand p{font-size:12px}
+  header{padding-bottom:0}
 }
 </style>
 </head>
@@ -96,7 +118,7 @@ footer{text-align:center;color:#9aa29f;font-size:10px;padding-top:18px}
     <div class="eyebrow">今天 · 营业结束录入</div>
     <div class="title"><h2>当日营业额</h2><button class="btn light hidden" id="todayBtn">修改</button></div>
     <div style="display:flex;align-items:center;gap:8px">
-      <input id="todayInput" type="number" min="0" step="0.1" placeholder="输入今天营业额" style="width:100%;font-size:20px;padding:11px 12px">
+      <input id="todayInput" type="number" min="0" step="0.1" placeholder="请输入金额（万）" style="width:100%;font-size:20px;padding:11px 12px">
       <button class="btn" id="todaySave">保存</button>
     </div>
     <div class="hero-value" style="color:#173c34;margin-top:12px" id="todayActual">0.0 <span>万西法</span></div>
@@ -188,7 +210,7 @@ function render(){
  document.getElementById('heroMsg').textContent=msg(pct,a-t);
  const todayVal=Number(data.daily[cm][day-1]||0);
  document.getElementById('todayActual').innerHTML=fmt(todayVal)+' <span>万西法</span>';
- document.getElementById('todayInput').value=todayVal||'';
+ document.getElementById('todayInput').value=todayVal?todayVal:'';
  document.getElementById('todayBtn').classList.toggle('hidden',!todayVal);
  document.getElementById('todaySave').textContent=todayVal?'更新':'保存';
  document.getElementById('todayNote').textContent=`${cm+1}月${day}日 · 达喀尔时间`;
@@ -221,13 +243,13 @@ function openMonth(i){
 }
 function editMonthTotal(i){
  const names=['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
- openModal('修改 '+names[i]+' 月度数据',`<div class="setting-label">月度目标（万西法）</div><div style="margin:6px 0 12px"><input id="mTarget" type="number" step="0.1" value="${data.targets[i]}" style="width:100%"></div><div class="setting-label">月度实际（万西法）</div><div style="margin:6px 0 12px"><input id="mActual" type="number" step="0.1" value="${monthActual(i)}" style="width:100%"></div><button class="btn" id="saveMonth" style="width:100%">保存</button>`);
+ openModal('修改 '+names[i]+' 月度数据',`<div class="setting-label">月度目标（万西法）</div><div style="margin:6px 0 12px"><input id="mTarget" type="number" step="0.01" value="${data.targets[i] ? data.targets[i] : ''}" placeholder="请输入金额（万）" style="width:100%"></div><div class="setting-label">月度实际（万西法）</div><div style="margin:6px 0 12px"><input id="mActual" type="number" step="0.01" value="${monthActual(i) ? monthActual(i) : ''}" placeholder="请输入金额（万）" style="width:100%"></div><button class="btn" id="saveMonth" style="width:100%">保存</button>`);
  document.getElementById('saveMonth').onclick=()=>{data.targets[i]=Number(document.getElementById('mTarget').value)||0;if(i!==7||monthActual(i)===data.actual[i])data.actual[i]=Number(document.getElementById('mActual').value)||0;save();closeModal()}
 }
 function editDaily(i){
  const names=['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
- let days=data.daily[i].map((v,d)=>`<div class="day ${i===currentMonth()&&d+1===currentDay()?'today':''}"><label>${i+1}月${d+1}日</label><input type="number" min="0" step="0.1" value="${v}" data-day-edit="${d}"></div>`).join('');
- openModal(names[i]+' · 每日营业额',`<div class="note" style="margin-bottom:9px">单位：万西法。修改后会自动汇总成该月实际营业额。</div><div class="daily-grid">${days}</div><button class="btn" id="saveDaily" style="width:100%;margin-top:12px">保存每日数据</button>`);
+ let days=data.daily[i].map((v,d)=>`<div class="day ${i===currentMonth()&&d+1===currentDay()?'today':''}"><label>${i+1}月${d+1}日</label><input type="number" min="0" step="0.01" value="${v ? v : ''}" placeholder="金额（万）" data-day-edit="${d}"></div>`).join('');
+ openModal(names[i]+' · 每日营业额',`<div class="note" style="margin-bottom:9px">单位：万西法。输入框为空表示当天尚未录入，保存后会自动汇总成该月实际营业额。</div><div class="daily-grid">${days}</div><button class="btn" id="saveDaily" style="width:100%;margin-top:12px">保存每日数据</button>`);
  document.getElementById('saveDaily').onclick=()=>{document.querySelectorAll('[data-day-edit]').forEach(e=>data.daily[i][+e.dataset.dayEdit]=Number(e.value)||0);data.actual[i]=data.daily[i].reduce((a,b)=>a+Number(b||0),0);save();closeModal()}
 }
 document.getElementById('todaySave').onclick=()=>{const v=Number(document.getElementById('todayInput').value)||0;data.daily[currentMonth()][currentDay()-1]=v;data.actual[currentMonth()]=data.daily[currentMonth()].reduce((a,b)=>a+Number(b||0),0);save();};
