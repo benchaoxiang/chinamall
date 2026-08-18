@@ -414,6 +414,18 @@ function downloadReport(){
 }
 document.getElementById('exportReport').onclick=downloadReport;
 tick();setInterval(tick,1000);weather();fx();render();
+  if (!localStorage.getItem('data_loaded')) {
+       fetch('my-local-data.json')
+         .then(res => res.json())
+         .then(data => {
+           for (let key in data) {
+             localStorage.setItem(key, data[key]);
+           }
+           localStorage.setItem('data_loaded', 'true');
+           location.reload();
+         })
+         .catch(err => console.log("无法加载本地数据文件", err));
+     }
 </script>
 </body>
 </html>
